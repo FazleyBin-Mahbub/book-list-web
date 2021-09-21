@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- font-awesome-icons  -->
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <!-- beautiful alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Website title  -->
+    <title>BookList</title>
+  </head>
+  <body>
+    <!-- heading  -->
+    <div class="container mt-4">
+      <h1 class="text-center text-success">
+        <i class="fad fa-book-open"></i>BookList
+      </h1>
+
+      <div id="book-form">
+        <!-- title  input-->
+        <div class="form-group">
+          <label for="book-name">Book Name</label>
+          <input type="text" id="book-name" class="form-control" required />
+        </div>
+        <!-- author input  -->
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" id="author" class="form-control" required />
+        </div>
+        <!-- Year input  -->
+        <div class="form-group">
+          <label for="published-year">Published Year</label>
+          <input
+            type="text"
+            id="published-year"
+            class="form-control"
+            required
+          />
+        </div>
+        <!-- add book item button  -->
+        <input
+          onclick="addBook()"
+          type="submit"
+          value="Add Book"
+          class="btn btn-success btn-block mt-2"
+        />
+      </div>
+      <table class="table table-striped mt-5 text-center">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <!-- booklist update -->
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+
+    <!-- custom javascript file  -->
+    <script src="js/script.js"></script>
+    <!-- bootstrap script file  -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
